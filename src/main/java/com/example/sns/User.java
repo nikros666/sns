@@ -2,6 +2,7 @@ package com.example.sns;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.time.LocalDateTime;
 
 import static java.time.LocalTime.now;
 
@@ -34,6 +35,11 @@ public class User {
         this.data = data;
     }
 
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
+        this.data = String.valueOf(LocalDateTime.now());
+    }
     @Override
     public String toString() {
         return "Users{" +
