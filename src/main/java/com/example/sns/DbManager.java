@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 import java.sql.*;
 public class DbManager {
-    private static final String URL = "jdbc:postgresql://localhost:5432/post";  //192.168.1.77
+    private static final String URL = "jdbc:postgresql://192.168.1.77:5432/post";  //192.168.1.77
     private static final String USERNAME = "jojo";
     private static final String PASSWORD = "bean";
     public User select(String login) {
