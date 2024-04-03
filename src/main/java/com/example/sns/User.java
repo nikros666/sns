@@ -1,51 +1,51 @@
 package com.example.sns;
 
-import java.time.LocalDate;
-import java.util.List;
-import java.time.LocalDateTime;
-
-import static java.time.LocalTime.now;
-
 public class User {
     private String login;
     private String password;
-    private String data;
+    private String dat;
+    private String email;
 
-    public String getLogin() {
-        return login;
+    public String getEmail() {
+        return email;
     }
+
+    public String getLogin() { return login; }
 
     public String getPassword() {
         return password;
     }
 
-    public String getData() {
-        return data;
+    public String getDat() {
+        return dat;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setLogin(String login) {
         this.login = login;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public void setData(String data) {
-        this.data = data;
+    public void setData(String dat) {
+        this.dat = dat;
     }
-
-    public User(String login, String password) {
+    public User(String login, String password, String dat, String email) {
         this.login = login;
         this.password = password;
-        this.data = String.valueOf(LocalDateTime.now());
+        this.dat = dat;
+        this.email = email;
     }
     @Override
     public String toString() {
         return "Users{" +
                 "\"login\":\"'" + login + "\"" +
                 ", \"password\":\"" + password + "\"" +
-                ", \"data\":\"" + data + "\"" +
+                ", \"data\":\"" + dat + "\"" +
+                ", \"email\":\"" + email + "\"" +
                 "}";
     }
 }
